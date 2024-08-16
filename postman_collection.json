@@ -1,0 +1,543 @@
+{
+  "info": {
+    "_postman_id": "e2d0ab60-8df7-467e-85bc-075cdf1b3099",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27275706"
+  },
+  "item": [
+    {
+      "name": "nodejs_internship",
+      "item": [
+        {
+          "name": "category",
+          "item": [
+            {
+              "name": "createCategory",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image_url",
+                      "type": "file",
+                      "src": "/C:/Users/hp/Downloads/WhatsApp Image 2024-06-22 at 22.57.47_1ea3da53.jpg"
+                    },
+                    {
+                      "key": "name",
+                      "value": "Beverages",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Refreshing drinks",
+                      "type": "text"
+                    },
+                    {
+                      "key": "tax",
+                      "value": "5",
+                      "type": "text"
+                    },
+                    {
+                      "key": "tax_type",
+                      "value": "GST",
+                      "type": "text"
+                    },
+                    {
+                      "key": "tax_applicability",
+                      "value": "true",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/category/create",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "v1", "category", "create"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getallcategory",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/category/getAll",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "v1", "category", "getAll"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getbyid",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/category/getCategoryById/66be51b6b02491167ba1ea17",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "category",
+                    "getCategoryById",
+                    "66be51b6b02491167ba1ea17"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/category/delete/66be51b6b02491167ba1ea17",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "category",
+                    "delete",
+                    "66be51b6b02491167ba1ea17"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editcategory",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image_url",
+                      "type": "file",
+                      "src": "/C:/Users/hp/Downloads/panjab university.png"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/category/edit/66be52b7b02491167ba1ea1d",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "category",
+                    "edit",
+                    "66be52b7b02491167ba1ea1d"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getallsubcategorybyid",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/category/getAllSubcategoriesOfCategoryById/66be52b7b02491167ba1ea1d",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "category",
+                    "getAllSubcategoriesOfCategoryById",
+                    "66be52b7b02491167ba1ea1d"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "subcategory",
+          "item": [
+            {
+              "name": "create",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image_url",
+                      "type": "file",
+                      "src": "/C:/Users/hp/Downloads/WhatsApp Image 2024-05-03 at 22.35.00_0cbd9b15.jpg"
+                    },
+                    {
+                      "key": "name",
+                      "value": "soft drinks",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description",
+                      "value": "true",
+                      "type": "text"
+                    },
+                    {
+                      "key": "tax",
+                      "value": "5",
+                      "type": "text"
+                    },
+                    {
+                      "key": "category_name",
+                      "value": "Beverages",
+                      "type": "text"
+                    },
+                    {
+                      "key": "tax_applicability",
+                      "value": "true",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/subcategory/create",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "v1", "subcategory", "create"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getallsub",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/subcategory/getAll",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "v1", "subcategory", "getAll"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "New Request",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/subcategory/delete/66be5770970d927ceaecf84d",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "subcategory",
+                    "delete",
+                    "66be5770970d927ceaecf84d"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getbyid",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/subcategory/getSubcategoryById/66be5827970d927ceaecf853",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "subcategory",
+                    "getSubcategoryById",
+                    "66be5827970d927ceaecf853"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "editsubcategorybyid",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image_url",
+                      "type": "file",
+                      "src": "postman-cloud:///1ef3a1f5-731e-46a0-91c9-9e766bb838f6"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/subcategory/edit/66be5827970d927ceaecf853",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "subcategory",
+                    "edit",
+                    "66be5827970d927ceaecf853"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "items",
+          "item": [
+            {
+              "name": "create_item",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image_url",
+                      "type": "file",
+                      "src": "/C:/Users/hp/Downloads/Screenshot (724).png"
+                    },
+                    {
+                      "key": "name",
+                      "value": "Classic Cola",
+                      "type": "text"
+                    },
+                    {
+                      "key": "description",
+                      "value": "Refreshing cola drink",
+                      "type": "text"
+                    },
+                    {
+                      "key": "tax_applicability",
+                      "value": "true",
+                      "type": "text"
+                    },
+                    {
+                      "key": "tax",
+                      "value": "5",
+                      "type": "text"
+                    },
+                    {
+                      "key": "baseAmount",
+                      "value": "2.50",
+                      "type": "text"
+                    },
+                    {
+                      "key": "discount",
+                      "value": "0.50",
+                      "type": "text"
+                    },
+                    {
+                      "key": "category",
+                      "value": "Beverages",
+                      "type": "text"
+                    },
+                    {
+                      "key": "subcategory",
+                      "value": "soft drinks",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/item/create",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "v1", "item", "create"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getall",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/item/getAll",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "v1", "item", "getAll"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getbyid",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/item/getItemById/66be5b89713591e307f7abc6",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "item",
+                    "getItemById",
+                    "66be5b89713591e307f7abc6"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/item/delete/66be5b89713591e307f7abc6",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "item",
+                    "delete",
+                    "66be5b89713591e307f7abc6"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "edit",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "image_url",
+                      "type": "file",
+                      "src": "postman-cloud:///1eef9921-ff67-4110-a199-ae1839388f58"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/item/edit/66be5c76713591e307f7abd4",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "item",
+                    "edit",
+                    "66be5c76713591e307f7abd4"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getByName",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/item/getItemByName?name=Classic",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": ["api", "v1", "item", "getItemByName"],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "Classic"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getAllItemsOfCategoryById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/item/getAllItemsOfCategoryById/66be52b7b02491167ba1ea1d",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "item",
+                    "getAllItemsOfCategoryById",
+                    "66be52b7b02491167ba1ea1d"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getAllItemsOfSubcategoryById",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:5000/api/v1/item/getAllItemsOfSubcategoryById/66be5827970d927ceaecf853",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "5000",
+                  "path": [
+                    "api",
+                    "v1",
+                    "item",
+                    "getAllItemsOfSubcategoryById",
+                    "66be5827970d927ceaecf853"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
