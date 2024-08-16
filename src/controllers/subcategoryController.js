@@ -165,9 +165,9 @@ const editSubcategoryById = async (req, res) => {
     const updates = req.body;
     let imageUrl;
     if (req.file) {
-      imageUrl = path.join(__dirname, "..", req.file.path);
+      console.log("Uploaded File Details:", req.file);
+      imageUrl = path.relative(__dirname, req.file.path);
       imageUrl = imageUrl.replace(/\\/g, "/");
-      updates.image = imageUrl;
     }
 
     const subcat = await subcategories.findByIdAndUpdate(

@@ -17,7 +17,7 @@ const createCategoryController = async (req, res) => {
       imageUrl = path.relative(__dirname, req.file.path);
       imageUrl = imageUrl.replace(/\\/g, "/");
     }
-    console.log("Image URL:", imageUrl);
+    // console.log("Image URL:", imageUrl);
 
     if (!name) {
       return res.status(400).send({
@@ -211,11 +211,12 @@ const editCategoryById = async (req, res) => {
   try {
     const categoryId = req.params.id;
     const updates = req.body;
+
     let imageUrl;
     if (req.file) {
-      imageUrl = path.join(__dirname, "..", req.file.path);
+      console.log("Uploaded File Details:", req.file);
+      imageUrl = path.relative(__dirname, req.file.path);
       imageUrl = imageUrl.replace(/\\/g, "/");
-      updates.image = imageUrl;
     }
 
     const cat = await categories.findByIdAndUpdate(categoryId, updates, {

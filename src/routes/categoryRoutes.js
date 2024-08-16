@@ -34,6 +34,4 @@ router.delete("/delete/:id", deleteCategoryById);
 // UPDATE CATEGORY BY ID || PUT
 router.put("/edit/:id", upload.single("image_url"), editCategoryById);
 
-// ------------------------------------------------------------------------------------------------
-
 module.exports = router;

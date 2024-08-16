@@ -77,11 +77,6 @@ const createItemController = async (req, res) => {
       imageUrl = imageUrl.replace(/\\/g, "/");
     }
 
-    // let imageUrl;
-    // if(req.file){
-    //     imageUrl= path.join(__dirname, '..', req.file.path);
-    //     imageUrl = imageUrl.replace(/\\/g, '/');
-    // }
     const newItem = new items({
       name,
       image: imageUrl,
@@ -137,7 +132,6 @@ const getAllItemController = async (req, res) => {
     });
   }
 };
-// ----------------------------------------------------------
 
 // --------------------- get item by id ----------------------
 const getItemById = async (req, res) => {
@@ -174,8 +168,6 @@ const getItemById = async (req, res) => {
     });
   }
 };
-// ----------------------------------------------------------------
-
 // ----------------- get all items with particular category id------
 const getAllItemsOfCategoryById = async (req, res) => {
   try {
@@ -188,12 +180,12 @@ const getAllItemsOfCategoryById = async (req, res) => {
     }
 
     // category
-    console.log("before populating");
+    // console.log("before populating");
 
     const itemsOfCategoryById = await categories
       .findById(categoryId)
       .populate("products");
-    console.log("after populating");
+    // console.log("after populating");
 
     if (!itemsOfCategoryById) {
       return res.status(400).send({
@@ -216,8 +208,6 @@ const getAllItemsOfCategoryById = async (req, res) => {
     });
   }
 };
-// -------------------------------------------------------------------
-
 // ---------- get all items under particular subcategory id ----------------
 const getAllItemsOfSubcategoryById = async (req, res) => {
   try {
@@ -258,9 +248,8 @@ const getAllItemsOfSubcategoryById = async (req, res) => {
     });
   }
 };
-// --------------------------------------------------------------------
 
-// ----------- DELETE ITEM ---------------------------------------------
+// DELETE ITEM
 const deleteItemById = async (req, res) => {
   try {
     const itemId = req.params.id;
@@ -314,9 +303,8 @@ const deleteItemById = async (req, res) => {
     });
   }
 };
-// ----------------------------------------------------------------
 
-// ---------------------- search by name || GET --------------------
+// search by name || GET
 const searchByName = async (req, res) => {
   try {
     const searchName = req.query.name;
@@ -345,8 +333,6 @@ const searchByName = async (req, res) => {
     });
   }
 };
-// ----------------------------------------------------------------
-
 // -------------------- edit items --------------------------------
 const edit = async (req, res) => {
   try {
@@ -354,11 +340,10 @@ const edit = async (req, res) => {
     const updates = req.body;
     let imageUrl;
     if (req.file) {
-      imageUrl = path.join(__dirname, "..", req.file.path);
+      console.log("Uploaded File Details:", req.file);
+      imageUrl = path.relative(__dirname, req.file.path);
       imageUrl = imageUrl.replace(/\\/g, "/");
-      updates.image = imageUrl;
     }
-
     const item = await items.findByIdAndUpdate(itemId, updates, { new: true });
 
     await item.save();
