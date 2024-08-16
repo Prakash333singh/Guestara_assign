@@ -26,21 +26,22 @@ Open a web browser and go to http://localhost:3000. This should display your Nod
 📁 src
 ├── server.js
 ├── 📁 database
-│ └── db.js
+│   └── db.js
 ├── 📁 controllers
-│ ├── categoryController.js
-│ ├── itemsController.js
-│ └── subCategoryController.js
+│   ├── categoryController.js
+│   ├── itemsController.js
+│   └── subCategoryController.js
 ├── 📁 middleware
-│ └── multer.js
+│   └── multer.js
 ├── 📁 models
-│ ├── categories.js
-│ ├── items.js
-│ └── subCategories.js
+│   ├── categories.js
+│   ├── items.js
+│   └── subCategories.js
 └── 📁 routes
-├── categoryRoute.js
-├── itemRoute.js
-└── subCategoryRoute.js
+    ├── categoryRoute.js
+    ├── itemRoute.js
+    └── subCategoryRoute.js
+
 
 ## API Endpoints
 
